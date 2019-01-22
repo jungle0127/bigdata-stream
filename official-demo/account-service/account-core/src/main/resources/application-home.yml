@@ -1,8 +1,16 @@
 spring:
-  application:
-    name: fescar-account
   datasource:
     username: root
     password: lotus
-    url: jdbc:mysql://192.168.1.6:3307/fescar-account?sessionVariables=foreign_key_checks=0&serverTimezone=CTT&useSSL=false&useUnicode=true&characterEncoding=utf8&autoReconnect=true&failOverReadOnly=false&maxReconnects=10
+    url: jdbc:mysql://192.168.1.6:3316/fescar-account?sessionVariables=foreign_key_checks=0&serverTimezone=CTT&useSSL=false&useUnicode=true&characterEncoding=utf8&autoReconnect=true&failOverReadOnly=false&maxReconnects=10
     driver-class-name: com.mysql.jdbc.Driver
+dubbo:
+  application:
+    name: fescar-account
+    id: fescar-account-id
+  scan:
+    base-packages:
+      - com.ps.fescar.account.service
+  server: true
+  registry:
+    address: zookeeper://192.168.1.6:2181

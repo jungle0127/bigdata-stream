@@ -1,6 +1,8 @@
 DROP DATABASE IF EXISTS `fescar-account`;
 CREATE DATABASE `fescar-account` DEFAULT CHARACTER SET utf8;
 
+use `fescar-account`;
+
 CREATE TABLE `undo_log` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `branch_id` bigint(20) NOT NULL,
@@ -22,3 +24,5 @@ CREATE TABLE `account_tbl` (
   `money` int(11) DEFAULT 0,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+insert into account_tbl (`user_id`,`money`) values('uid',1000);
