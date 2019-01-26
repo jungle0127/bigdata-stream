@@ -26,6 +26,9 @@
         <springboot.dubbo.version>0.2.0</springboot.dubbo.version>
         <alibaba.spring.version>1.0.2</alibaba.spring.version>
         <dubbo.version>2.6.5</dubbo.version>
+        <netty.version>4.1.33.Final</netty.version>
+        <nacos.registry.version>0.0.2</nacos.registry.version>
+        <nacos.version>0.8.0</nacos.version>
     </properties>
     <dependencyManagement>
         <dependencies>
